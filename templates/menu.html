@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurants</title>
+</head>
+<body>
+
+    <h2>{{restaurant.name}}</h2>
+
+    <a href="#">Add new menu item</a>
+
+    {% if not items[0].name %}
+
+        <p>You currently have no menu item in the list</p>
+    {% else %}
+
+        {% for item in items %}
+
+            <div>
+                <p>{{item.name}}</p>
+                <p>{{item.price}}</p>
+                <p>{{item.description}}</p>
+                <p>{{item.course}}</p>
+
+                <a href="#">Edit</a>
+                <br>
+
+                <a href="#">Delete</a>
+            </div>
+
+            <br>
+            <br>
+
+        {% endfor %}
+    {% endif %}
+
+</body>
+</html>
