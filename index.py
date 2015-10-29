@@ -27,45 +27,45 @@ def newRestaurant():
 @app.route('/restaurant/<int:restaurant_id>/edit')
 def editRestaurant(restaurant_id):
   return render_template('editRestaurant.html',
-                                       restaurant_id=restaurant_id,
-                                       restaurant=restaurant)
+                         restaurant_id=restaurant_id,
+                         restaurant=restaurant)
 
 
 @app.route('/restaurant/<int:restaurant_id>/delete')
 def deleteRestaurant(restaurant_id):
   return render_template('deleteRestaurant.html',
-                                       restaurant_id=restaurant_id,
-                                       restaurant=restaurant)
+                         restaurant_id=restaurant_id,
+                         restaurant=restaurant)
 
 
 @app.route('/restaurant/<int:restaurant_id>/menu')
 def showRestaurantMenu(restaurant_id):
   return render_template('menu.html',
-                                       restaurant_id=restaurant_id,
-                                       restaurant=restaurant,
-                                       items=items)
+                         restaurant_id=restaurant_id,
+                         restaurant=restaurant,
+                         items=items)
 
 
 @app.route('/restaurant/<int:restaurant_id>/menu/new')
 def newMenuItem(restaurant_id):
   return render_template('addMenuItem.html',
-                                       restaurant_id=restaurant_id)
+                         restaurant_id=restaurant_id)
 
 
 @app.route('/restaurant/<int:restaurant_id>/menu/<int:menu_id>/edit')
 def editMenuItem(restaurant_id, menu_id):
   return render_template('editMenuItem.html',
-                                       restaurant_id=restaurant_id,
-                                       menu_id=menu_id,
-                                       item=item)
+                         restaurant_id=restaurant_id,
+                         menu_id=menu_id,
+                         item=item)
 
 
 @app.route('/restaurant/<int:restaurant_id>/menu/<int:menu_id>/delete')
 def deleteMenuItem(restaurant_id, menu_id):
   return render_template('deleteMenuItem.html',
-                                       restaurant_id=restaurant_id,
-                                       menu_id=menu_id,
-                                       item=item)
+                         restaurant_id=restaurant_id,
+                         menu_id=menu_id,
+                         item=item)
 
 
 if __name__ == "__main__":
